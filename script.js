@@ -10,8 +10,10 @@ function createGrid(sizeOfGrid) {
             const squareDiv = document.createElement("div");
             squareDiv.classList.add("square-div");
             squareDiv.textContent = "Test";
-            const rowContainer = document.querySelector(".row-container");
-            rowContainer.appendChild(squareDiv);
+            const rowContainers = document.querySelectorAll(".row-container");
+            rowContainers.forEach((rowContainer) => {
+                rowContainer.appendChild(squareDiv);
+            });
         };
     }
     
