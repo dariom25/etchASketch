@@ -1,4 +1,4 @@
-let gridSide = 32
+let getGridSize = prompt("Please enter a number between 1 and 100 to a grid.")
 
 function createGrid(sizeOfGrid) {
     for (let i = 0; i < sizeOfGrid; i++) {
@@ -14,9 +14,19 @@ function createGrid(sizeOfGrid) {
                 rowContainer.appendChild(squareDiv);
             });
         };
-    }
-    
-        
+    }       
 }
 
-createGrid(gridSide);
+function addEventlistenersToGrid() {
+    const squareDivs = document.querySelectorAll(".square-div");
+    squareDivs.forEach((squareDiv) => {
+        squareDiv.addEventListener("mouseover", () => {
+            squareDiv.setAttribute("style", "background-color: black")
+        });
+    });
+}
+
+
+
+createGrid(getGridSize);
+addEventlistenersToGrid();
