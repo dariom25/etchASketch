@@ -5,6 +5,12 @@
     flex-wrap: wrap;
 }
 
+.row-container{
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
 .square-div{    
     flex: 1;
     border-style: solid;
