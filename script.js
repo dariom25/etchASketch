@@ -26,6 +26,12 @@ function addEventlistenersToGrid() {
     });
 }
 
+function addEventListenerToButton() {
+    const button = document.querySelector(".button")
+    button.addEventListener(() => {
+        getGridSize();
+    })
+}
 
 
 createGrid(getGridSize);
