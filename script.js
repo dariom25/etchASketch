@@ -1,13 +1,21 @@
-let gridSize = 16
+let gridSide = 4
 
 function createGrid(sizeOfGrid) {
     for (let i = 0; i < sizeOfGrid; i++) {
-        const squareDiv = document.createElement("div")
-        squareDiv.classList.add("square-div")
-        squareDiv.textContent = "Test"
-        const gridContainer = document.querySelector(".container")
-        gridContainer.appendChild(squareDiv)
+        const rowDiv = document.createElement("div");
+        rowDiv.classList.add("row-container");
+        const gridContainer = document.querySelector(".container");
+        gridContainer.appendChild(rowDiv)
+        for (let i = 0; i < sizeOfGrid; i++) {
+            const squareDiv = document.createElement("div");
+            squareDiv.classList.add("square-div");
+            squareDiv.textContent = "Test";
+            const rowContainer = document.querySelector(".row-container");
+            rowContainer.appendChild(squareDiv);
+        };
     }
+    
+        
 }
 
-createGrid(gridSize);
+createGrid(gridSide);
