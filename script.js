@@ -32,10 +32,13 @@ function getGridSize() {
 }
 
 function deleteGrid() {
+    let gridSize = 0;
     const rowDivs = document.querySelectorAll(".row-container");
     rowDivs.forEach((rowDiv) => {
+        gridSize++
         rowDiv.remove();
     });
+    return gridSize
 }
 
 function changeSizeOfGrid() {    
@@ -44,9 +47,18 @@ function changeSizeOfGrid() {
     changeColorOfSquares();
 }
 
+function resetGrid() {
+    createGrid(resetGrid());
+    changeColorOfSquares();
+}
+
 createGrid(standardGrid);
 changeColorOfSquares();
-const button = document.querySelector(".button");
-button.addEventListener("click", () => {
+const changeSizeButton = document.querySelector(".change-size-button");
+changeSizeButton.addEventListener("click", () => {
     changeSizeOfGrid();
+});
+const resetButton = document.querySelector(".reset-button");
+resetButton.addEventListener("click", () => {
+    resetGrid();
 });
