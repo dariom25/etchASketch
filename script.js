@@ -17,7 +17,7 @@ function createGrid(sizeOfGrid) {
     }       
 }
 
-function addEventlistenersToGrid() {
+function changeColorOfSquares() {
     const squareDivs = document.querySelectorAll(".square-div");
     squareDivs.forEach((squareDiv) => {
         squareDiv.addEventListener("mouseover", () => {
@@ -31,14 +31,22 @@ function getGridSize() {
     return gridSize
 }
 
-function resetGrid() {
+function deleteGrid() {
     const rowDivs = document.querySelectorAll(".row-container");
     rowDivs.forEach((rowDiv) => {
         rowDiv.remove();
     });
 }
 
+function changeSizeOfGrid() {    
+    deleteGrid();
+    createGrid(getGridSize());
+    changeColorOfSquares();
+}
+
 createGrid(standardGrid);
-addEventlistenersToGrid();
+changeColorOfSquares();
 const button = document.querySelector(".button");
-button.addEventListener("click", resetGrid);
+button.addEventListener("click", () => {
+    changeSizeOfGrid();
+});
