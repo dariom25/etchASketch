@@ -48,7 +48,7 @@ function changeSizeOfGrid() {
 }
 
 function resetGrid() {
-    createGrid(resetGrid());
+    createGrid(deleteGrid());
     changeColorOfSquares();
 }
 
