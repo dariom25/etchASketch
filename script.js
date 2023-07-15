@@ -1,4 +1,4 @@
-let getGridSize = prompt("Please enter a number between 1 and 100 to a grid.")
+let standardGrid = 32
 
 function createGrid(sizeOfGrid) {
     for (let i = 0; i < sizeOfGrid; i++) {
@@ -26,13 +26,19 @@ function addEventlistenersToGrid() {
     });
 }
 
-function addEventListenerToButton() {
-    const button = document.querySelector(".button")
-    button.addEventListener(() => {
-        getGridSize();
-    })
+function getGridSize() {
+    let gridSize = prompt("Please enter a number between 1 and 100 to a grid.");
+    return gridSize
 }
 
+function resetGrid() {
+    const rowDivs = document.querySelectorAll(".row-container");
+    rowDivs.forEach((rowDiv) => {
+        rowDiv.remove();
+    });
+}
 
-createGrid(getGridSize);
+createGrid(standardGrid);
 addEventlistenersToGrid();
+const button = document.querySelector(".button");
+button.addEventListener("click", resetGrid);
