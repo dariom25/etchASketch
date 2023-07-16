@@ -1,13 +1,14 @@
 body{
     display: flex;
-    flex-direction: column;
     align-items: center;
+    justify-content: center;
     gap: 16px;
     background-color: #A31621;
 }
 
 .text-container{
-
+    width: 0px;
+    word-wrap: break-word;
 }
 
 .content{
