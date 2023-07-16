@@ -26,9 +26,14 @@ function changeColorOfSquares() {
     });
 }
 
-function changeColorOfSquaresRandomly() {
-    const color = Math.floor(Math.random()*255);
-    return color
+function changeColorOfSquaresRandomly() { //generate colors only for a certain colors spectrum --> vielleicht doch mit rgb (als string)
+    const squareDivs = document.querySelectorAll(".square-div");
+    squareDivs.forEach((squareDiv) => {
+        squareDiv.addEventListener("mouseover", () => {
+            const color = Math.floor(Math.random()*16777215).toString(16);
+            squareDiv.setAttribute("style", "background-color: #" + color);
+        });
+    });
 }
 
 function getGridSize() {
@@ -58,7 +63,7 @@ function resetGrid() {
 }
 
 createGrid(standardGrid);
-changeColorOfSquares();
+changeColorOfSquaresRandomly();
 const changeSizeButton = document.querySelector(".change-size-button");
 changeSizeButton.addEventListener("click", () => {
     changeSizeOfGrid();
