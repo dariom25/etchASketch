@@ -27,7 +27,7 @@ body{
 
 }
 
-.container{
+.grid-container{
     width: 880px;
     height: 880px;
     display: flex;

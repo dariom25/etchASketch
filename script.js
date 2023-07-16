@@ -4,7 +4,7 @@ function createGrid(sizeOfGrid) {
     for (let i = 0; i < sizeOfGrid; i++) {
         const rowDiv = document.createElement("div");
         rowDiv.classList.add("row-container");
-        const gridContainer = document.querySelector(".container");
+        const gridContainer = document.querySelector(".grid-container");
         gridContainer.appendChild(rowDiv)
         for (let i = 0; i < sizeOfGrid; i++) {
             const squareDiv = document.createElement("div");
