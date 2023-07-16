@@ -6,8 +6,25 @@ body{
     background-color: #A31621;
 }
 
-.button-container{
+.button{
     background-color: #91972A;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    color: #232E21;
+    font-weight: bold;
+    padding: 8px;
+}
+
+.button:hover{
+    color: #FFFFFF;
+    font-weight: bold;
+}
+
+.button:active{
+    opacity: 70%;
+    transition: 1ms;
+
 }
 
 .container{
