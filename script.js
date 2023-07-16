@@ -26,6 +26,11 @@ function changeColorOfSquares() {
     });
 }
 
+function changeColorOfSquaresRandomly() {
+    const color = Math.floor(Math.random()*255);
+    return color
+}
+
 function getGridSize() {
     let gridSize = prompt("Please enter a number between 1 and 100 to a grid.");
     return gridSize
