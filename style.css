@@ -4,6 +4,7 @@ body{
     justify-content: center;
     gap: 16px;
     background-color: #A31621;
+    font-family: Roboto, sans-serif;
 }
 
 .text-container{
