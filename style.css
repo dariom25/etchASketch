@@ -9,6 +9,10 @@ body{
 .text-container{
     width: 0px;
     word-wrap: break-word;
+    color: #91972A;
+    font-size: 96px;
+    margin-right: 120px;
+    margin-left: 50px;
 }
 
 .content{
