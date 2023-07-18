@@ -45,8 +45,8 @@ body{
 }
 
 .grid-container{
-    width: 880px;
-    height: 880px;
+    width: 700px;
+    height: 700px;
     display: flex;
     border-style: solid;
     background-color: #FFFFFF;
