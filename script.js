@@ -37,7 +37,8 @@ function changeColorOfSquaresRandomly() { //generate colors only for a certain c
 }
 
 function getGridSize() {
-    let gridSize = prompt("Please enter a number between 1 and 100 to a grid.");
+    let gridSizeInput = document.querySelector(".gridsize-input");
+    let gridSize = gridSizeInput.valueAsNumber
     return gridSize
 }
 
@@ -62,10 +63,11 @@ function resetGrid() {
     changeColorOfSquares();
 }
 
+//main
 createGrid(standardGrid);
 changeColorOfSquaresRandomly();
-const changeSizeButton = document.querySelector(".change-size-button");
-changeSizeButton.addEventListener("click", () => {
+const changeSizeInput = document.querySelector(".gridsize-input");
+changeSizeInput.addEventListener("click", () => {
     changeSizeOfGrid();
 });
 const resetButton = document.querySelector(".reset-button");
