@@ -13,14 +13,18 @@ body{
     background-color: #232E21;
     color: #91972A;
     font-size: 96px;
-    margin-right: 120px;
-    margin-left: 50px;
+    box-sizing: border-box;
 }
 
 .content{
     display: flex;
-    flex-direction: column;
     align-items: center;
+    gap: 16px;
+}
+
+.button-container{
+    display: flex;
+    flex-direction: column;
     gap: 16px;
 }
 
