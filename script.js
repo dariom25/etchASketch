@@ -55,16 +55,19 @@ function deleteGrid() {
 function changeSizeOfGrid() {    
     deleteGrid();
     createGrid(getGridSize());
-    changeColorOfSquares();
+    changeColorOfSquares(getColorFromInput());
 }
 
 function resetGrid() {
-    const colorInput = document.querySelector(".color");
-    let color = colorInput.value;
     createGrid(deleteGrid());
-    changeColorOfSquares(color);
+    changeColorOfSquares(getColorFromInput());
 }
 
+function getColorFromInput() {
+    const colorInput = document.querySelector(".color");
+    let color = colorInput.value;
+    return color
+}
 
 //main
 createGrid(standardGrid);
