@@ -63,17 +63,6 @@ function resetGrid() {
     changeColorOfSquares();
 }
 
-function changeColor(color) { //note: add white border for selected button
-    switch(color){
-        case "colorful":
-            changeColorOfSquaresRandomly();
-            break;
-        case "color":
-            changeColorOfSquares()
-            break;
-    }
-}
-
 //main
 createGrid(standardGrid);
 changeColorOfSquaresRandomly();
