@@ -59,8 +59,10 @@ function changeSizeOfGrid() {
 }
 
 function resetGrid() {
+    const colorInput = document.querySelector(".color");
+    let color = colorInput.value;
     createGrid(deleteGrid());
-    changeColorOfSquares();
+    changeColorOfSquares(color);
 }
 
 //main
