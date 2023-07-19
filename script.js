@@ -63,6 +63,7 @@ function resetGrid() {
     changeColorOfSquares();
 }
 
+
 //main
 createGrid(standardGrid);
 changeColorOfSquaresRandomly();
@@ -73,4 +74,8 @@ changeSizeInput.addEventListener("click", () => {
 const resetButton = document.querySelector(".reset-button");
 resetButton.addEventListener("click", () => {
     resetGrid();
+});
+const colorfulBtn = document.querySelector(".colorful")
+colorfulBtn.addEventListener("click", () => {
+    changeColor("colorful");
 });
