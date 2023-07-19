@@ -65,9 +65,10 @@ function resetGrid() {
     changeColorOfSquares(color);
 }
 
+
 //main
 createGrid(standardGrid);
-changeColorOfSquaresRandomly();
+changeColorOfSquares("black");
 const changeSizeInput = document.querySelector(".gridsize-input");
 changeSizeInput.addEventListener("click", () => {
     changeSizeOfGrid();
