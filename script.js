@@ -89,3 +89,8 @@ const colorfulBtn = document.querySelector(".colorful")
 colorfulBtn.addEventListener("click", () => {
     changeColor("colorful");
 });
+const colorInput = document.querySelector(".color")
+colorInput.addEventListener("click", () => {
+    let color = colorInput.value;
+    changeColor("color")
+});
