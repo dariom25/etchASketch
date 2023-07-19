@@ -3,7 +3,7 @@ body{
     flex-direction: column;
     justify-content: center;
     gap: 16px;
-    background-color: #A31621;
+    background-color: #564946;
     font-family: Roboto, sans-serif;
     margin: 0;
 }
@@ -12,8 +12,8 @@ body{
     display: flex;
     align-content: center;
     justify-content: center;
-    background-color: #232E21;
-    color: #91972A;
+    background-color: #558564;
+    color: #49D49D;
     font-size: 96px;
 }
 
@@ -31,11 +31,11 @@ body{
 }
 
 .button{
-    background-color: #91972A;
+    background-color: #49D49D;
     font-size: 16px;
     border: none;
     border-radius: 5px;
-    color: #232E21;
+    color: #564946;
     font-weight: bold;
     padding: 8px;
 }
@@ -57,7 +57,7 @@ body{
     height: 700px;
     display: flex;
     border-style: solid;
-    background-color: #FFFFFF;
+    background-color: lightgray;
 }
 
 .row-container{
