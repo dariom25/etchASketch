@@ -17,11 +17,11 @@ function createGrid(sizeOfGrid) {
     }       
 }
 
-function changeColorOfSquares() {
+function changeColorOfSquares(color) {
     const squareDivs = document.querySelectorAll(".square-div");
     squareDivs.forEach((squareDiv) => {
         squareDiv.addEventListener("mouseover", () => {
-            squareDiv.setAttribute("style", "background-color: black")
+            squareDiv.setAttribute("style", "background-color: " + color);
         });
     });
 }
@@ -87,10 +87,10 @@ resetButton.addEventListener("click", () => {
 });
 const colorfulBtn = document.querySelector(".colorful")
 colorfulBtn.addEventListener("click", () => {
-    changeColor("colorful");
+    changeColorOfSquaresRandomly();
 });
 const colorInput = document.querySelector(".color")
-colorInput.addEventListener("click", () => {
+colorInput.addEventListener("input", () => {
     let color = colorInput.value;
-    changeColor("color")
+    changeColorOfSquares(color);
 });
